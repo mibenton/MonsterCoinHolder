@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
 
 # ⚠️ 改成你自己的檔案路徑 & Sheet ID
-TOKEN_PATH = "e:/TradingBot交易策略/Pionex模擬倉/Token.json"
+TOKEN_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Token.json")
 SHEET_ID = "1QYiJwT3wNh5xk5UWWlS8ha-YGmeB9mURyIUmKay1FLs"
 
 if not os.path.exists(TOKEN_PATH):
