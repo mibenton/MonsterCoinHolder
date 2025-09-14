@@ -181,4 +181,6 @@ if __name__ == "__main__":
     scheduler_thread.start()
     # 啟動 Flask 服務器
     port = int(os.environ.get('PORT', 8080))
-    app.run(host='0.0.0.0', port=port)
+    logging.info(f"Starting Flask on host=0.0.0.0, port={port}")  # 添加這行日誌
+    app.run(host='0.0.0.0', port=port, debug=False)  # 生產環境設 debug=False
+
